@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
    <head>
@@ -1149,33 +1148,34 @@
                 console.log('Page complete');
             </script>
 <script>
-import axios from 'axios' 
+import requests
+api_key = "e06a7619-6d0a-4b76-b89a-072883c52399"
 
-let session_id;
-
-const chatSession = await axios.post(
-   'https://agentivehub.com/api/chat/session',
- {
-    "api_key": "e06a7619-6d0a-4b76-b89a-072883c52399",
-     "assistant_id": "69a36854-f322-49de-ba11-4aafd9b65761",
+chat_session = requests.post(
+    'https://agentivehub.com/api/chat/session',
+    json = {
+        "api_key" : "api_key",
+        "assistant_id" : "69a36854-f322-49de-ba11-4aafd9b65761",    
     }
 )
 
-session_id = chatSession.data.session_id;
+# Get the chat session ID
+chat_session_id = chat_session.json()["session_id"]
+   
+# Send a message to the chat session
+chat_response = {
+    "api_key" : api_key,
+    "session_id" : chat_session_id,
+    "type" : "custom_code",
+    "assistant_id" : "69a36854-f322-49de-ba11-4aafd9b65761",
+    "messages" : [{"role": "user", "content": "Say Hello!"}]
+}
 
-const chatReponse = {
- api_key: "e06a7619-6d0a-4b76-b89a-072883c52399",
- session_id,
- type: 'custom_code',
- assistant_id: "69a36854-f322-49de-ba11-4aafd9b65761",
- messages:[{ role: 'user',  content: 'Say Hello!' }],
- };
-
-const chat = await axios.post(
-   'https://agentivehub.com/api/chat',
- chatReponse
- );
-  return chat.data;
+req = requests.post(
+    'https://agentivehub.com/api/chat',
+    json = chat_response
+)
+resp = req.json()
     	    </script>
             </body>
             </html>
