@@ -1,0 +1,1153 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      
+       <title>{{project.seoTitle}}</title>
+      <!-- SEO Description -->
+      <meta name="description" content="{{project.seoDescription}}">
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
+      
+      <!-- {headerScripts} -->
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+             colors: {
+                primary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Dynamic Meta Tags -->
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="keywords" content="{{project.meta.keywords}}">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      <meta name="google-site-verification" content="{{project.meta.googleVerification}}">
+      <meta name="baidu-verification" content="{{project.meta.baiduVerification}}">
+      <meta name="yandex-verification" content="{{project.meta.yandexVerification}}">
+      <meta name="bing-verification" content="{{project.meta.bingVerification}}">
+      <meta property="og:title" content="{{project.meta.ogTitle}}">
+      <meta property="og:description" content="{{project.meta.ogDescription}}">
+      <meta property="og:image" content="{{project.meta.ogImage}}">
+      <meta property="og:type" content="website">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:site_name" content="{{project.name}}">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="{{project.meta.ogTitle}}">
+      <meta name="twitter:description" content="{{project.meta.ogDescription}}">
+      <meta name="twitter:image" content="{{project.meta.ogImage}}">
+
+      <!-- Base Styles -->
+      <style>
+      * {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Webkit browsers like Chrome, Safari, newer Edge */
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 0px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: #666;
+        }
+
+        /* Remove tap highlight on mobile */
+        * {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Improve text rendering */
+        body {
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Focus outline styles */
+        :focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+          
+          a[href]:after {
+            content: " (" attr(href) ")";
+          }
+        }
+      </style>
+
+      <!-- Enhanced Image Handler -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                  const tempImage = new Image();
+                  tempImage.onload = () => {
+                    img.src = img.dataset.src;
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                  };
+                  tempImage.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                  observer.unobserve(img);
+                }
+              }
+            });
+          }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+          });
+
+          const loadImage = (img) => {
+            if ('loading' in HTMLImageElement.prototype) {
+              img.loading = 'lazy';
+            }
+            
+            img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
+            
+            img.onerror = () => {
+              const width = img.getAttribute('width') || img.clientWidth || 300;
+              const height = img.getAttribute('height') || img.clientHeight || 200;
+              img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
+              img.alt = 'Image unavailable';
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100', 'error-image');
+            };
+
+            if (img.dataset.src) {
+              imageObserver.observe(img);
+            } else {
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100');
+            }
+          };
+
+          document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
+
+          // Watch for dynamically added images
+          new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+              mutation.addedNodes.forEach(node => {
+                if (node.nodeType === 1) {
+                  if (node.tagName === 'IMG') {
+                    loadImage(node);
+                  }
+                  node.querySelectorAll('img').forEach(loadImage);
+                }
+              });
+            });
+          }).observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+        });
+
+        // Performance monitoring
+        if ('performance' in window && 'PerformanceObserver' in window) {
+          // Create performance observer
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              if (entry.entryType === 'largest-contentful-paint') {
+                // console.log(`LCP: ${entry.startTime}ms`);
+              }
+              if (entry.entryType === 'first-input') {
+                // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
+              }
+              if (entry.entryType === 'layout-shift') {
+                // console.log(`CLS: ${entry.value}`);
+              }
+            });
+          });
+
+          // Observe performance metrics
+          observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+          // Log basic performance metrics
+          window.addEventListener('load', () => {
+            const timing = performance.getEntriesByType('navigation')[0];
+            console.log({
+              'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
+              'TCP Connection': timing.connectEnd - timing.connectStart,
+              'DOM Content Loaded': timing.domContentLoadedEventEnd - timing.navigationStart,
+              'Page Load': timing.loadEventEnd - timing.navigationStart
+            });
+          });
+        }
+
+        // Handle offline/online status
+        window.addEventListener('online', () => {
+          document.body.classList.remove('offline');
+          console.log('Connection restored');
+        });
+        
+        window.addEventListener('offline', () => {
+          document.body.classList.add('offline');
+          console.log('Connection lost');
+        });
+      </script>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative ">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+
+   </body>
+</html><element id="8038a016-b526-4b49-8d26-369f896cdcf8" data-section-id="8038a016-b526-4b49-8d26-369f896cdcf8">
+
+<htmlCode>
+<div id="root">
+  <nav id="navbar" class="fixed w-full z-50 bg-neutral-900 border-b border-neutral-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo -->
+        <div class="flex-shrink-0 flex items-center">
+          <img class="h-8 w-8 rounded-full" src="https://yt3.googleusercontent.com/K0M6FLMwgOWcShrPdj1kWTHNA0LusmgjaPnlnEJ1-FiR839UtlKnwwyfTVES6b2JVmu1rcT62A=s160-c-k-c0x00ffffff-no-rj" alt="दैनिक समाचार Logo">
+          <span class="ml-2 text-white font-bold text-xl">दैनिक समाचार</span>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-center space-x-4">
+            <a href="#hero" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium animate__animated animate__fadeIn">Home</a>
+            <a href="#latestVideos" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium animate__animated animate__fadeIn">Latest Videos</a>
+            <a href="#popularCategories" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium animate__animated animate__fadeIn">Categories</a>
+            <a href="#aboutChannel" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium animate__animated animate__fadeIn">About</a>
+            <a href="#liveStream" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium animate__animated animate__fadeIn">Live</a>
+            <a href="#subscribeSection" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium animate__animated animate__fadeIn">Subscribe</a>
+            <a href="#contactUs" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium animate__animated animate__fadeIn">Contact</a>
+          </div>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+            <span class="sr-only">Open main menu</span>
+            <svg id="menu-icon" class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-neutral-900">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="#hero" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+        <a href="#latestVideos" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Latest Videos</a>
+        <a href="#popularCategories" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Categories</a>
+        <a href="#aboutChannel" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+        <a href="#liveStream" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Live</a>
+        <a href="#subscribeSection" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Subscribe</a>
+        <a href="#contactUs" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+      
+      // Animate menu icon
+      const menuIcon = document.getElementById('menu-icon');
+      menuIcon.classList.toggle('rotate-90');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      
+      if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        document.querySelector(targetId).scrollIntoView({
+          behavior: 'smooth'
+        });
+        
+        // Close mobile menu after clicking a link
+        document.getElementById('mobile-menu').classList.add('hidden');
+      });
+    });
+  </script>
+</div>
+</htmlCode></element><element id="758e6025-8e43-447f-9ed6-8653516c621e" data-section-id="758e6025-8e43-447f-9ed6-8653516c621e">
+
+
+                
+                
+                
+                
+                <htmlcode id="el-6tqep8wq">
+<div id="root">
+  <section id="hero" class="min-h-[70vh] bg-neutral-900 pt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between py-12" id="el-04f1d2ob">
+      <!-- Left Content -->
+      <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0" id="el-egw6vg4w">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 animate__animated animate__fadeInLeft" id="el-6vykinsa">
+          दैनिक समाचार Official
+        </h1>
+        <p class="text-gray-300 text-lg md:text-xl mb-8 animate__animated animate__fadeInLeft animate__delay-1s" id="el-nlbxhb27">
+          राजनीति, अर्थव्यवस्था, मनोरंजन, खेल और अधिक की विश्वसनीय, तथ्यात्मक और निष्पक्ष रिपोर्टिंग का आपका भरोसेमंद स्रोत।
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 animate__animated animate__fadeInUp animate__delay-2s" id="el-zv2qhf30">
+          <div class="flex items-center bg-neutral-800 rounded-lg p-3" id="el-8bl0zlaj">
+            <span class="text-gray-300 mr-2" id="el-vmfzboma">107</span>
+            <span class="text-gray-400" id="el-37j1tyzk">subscribers</span>
+          </div>
+          <div class="flex items-center bg-neutral-800 rounded-lg p-3" id="el-4p1991r6">
+            <span class="text-gray-300 mr-2" id="el-aab4znwg">222</span>
+            <span class="text-gray-400" id="el-ym6gweg7">videos</span>
+          </div>
+        </div>
+        <div class="mt-8 animate__animated animate__fadeInUp animate__delay-3s" id="el-fo7qw4d2">
+          <a href="#subscribeSection" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 md:text-lg" id="el-u81vp62j">
+            Subscribe Now
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Content -->
+      <div class="md:w-1/2 relative animate__animated animate__fadeInRight" id="el-4eqdjyg1">
+        <div class="relative w-full h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-2xl" id="el-vm4bus4v">
+          <img src="https://dms.mydukaan.io/original/webp/media/e9d1fb2d-b4d4-48f0-be23-b29838807686.jpg" alt="Channel Banner" class="w-full h-full object-cover transition-opacity duration-300 opacity-100" loading="lazy" style="width: 395px; margin-left: 60px;" id="el-i7nf2xka">
+          <div class="absolute bottom-4 left-4 flex items-center" id="el-r4c0nssf">
+            <img src="https://yt3.googleusercontent.com/K0M6FLMwgOWcShrPdj1kWTHNA0LusmgjaPnlnEJ1-FiR839UtlKnwwyfTVES6b2JVmu1rcT62A=s160-c-k-c0x00ffffff-no-rj" alt="Channel Logo" class="w-16 h-16 rounded-full border-2 border-white transition-opacity duration-300 opacity-100" loading="lazy" id="el-dwe62f6f">
+          </div>
+        </div>
+        <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-red-600 rounded-full opacity-20 blur-xl" id="el-c62i4o4c"></div>
+        <div class="absolute -top-4 -left-4 w-32 h-32 bg-blue-600 rounded-full opacity-20 blur-xl" id="el-59xemxlz"></div>
+      </div>
+    </div>
+
+    <!-- Bottom Wave -->
+    <div class="w-full" id="el-wu9zw0ww">
+      <svg class="w-full h-16" viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" id="el-n5amqe50">
+        <path fill="#171717" d="M0,32L48,37.3C96,43,192,53,288,58.7C384,64,480,64,576,58.7C672,53,768,43,864,42.7C960,43,1056,53,1152,53.3C1248,53,1344,43,1392,37.3L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z" id="el-xjgu48ee"></path>
+      </svg>
+    </div>
+  </section>
+</div>
+</htmlcode>
+              
+              
+              
+              
+              </element><element id="ade5667e-c3d4-480e-a70f-feb85509ed6e" data-section-id="ade5667e-c3d4-480e-a70f-feb85509ed6e">
+
+
+                
+                <htmlcode id="el-ar1bnr1h">
+<div id="root">
+  <section id="latestVideos" class="py-20 bg-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="el-7ag1xvv1">
+      <h2 class="text-3xl font-bold text-neutral-900 text-center mb-12 animate__animated animate__fadeInUp" id="el-2dfwza76">Latest Videos</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="el-4k004jjr">
+        <!-- Video Card 1 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden animate__animated animate__fadeIn" id="el-tctjrd77">
+  <div class="relative" id="el-p5lptk52">
+    <img src="https://i.ytimg.com/vi/JQY7T9SRiYM/hqdefault.jpg" alt="YouTube Video Thumbnail" class="w-full h-48 object-cover transition-opacity duration-300 opacity-100" loading="lazy" id="el-3su9sq9h">
+    <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center" id="el-aixc9ixr">
+      <button class="bg-red-600 hover:bg-red-700 text-white rounded-full w-12 h-12 flex items-center justify-center" onclick="window.open('https://youtu.be/JQY7T9SRiYM?si=RLvCwRyiZTWivrhd', '_blank')" id="el-cbbs11e5">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" id="el-lcmlflci">
+          <path d="M8 5v10l8-5-8-5z" id="el-m1nol1ip"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="p-4" id="el-4yg59vxi">
+    <div class="video-section bg-white p-4 rounded-lg shadow-md" style="width: 247px; height: 62px;" id="el-414jgnht">
+    <h3 class="text-lg font-semibold mb-2" id="el-oiotrl9u">Maha Kumbh 2025</h3>
+    <div class="video-container relative pt-[56.25%]" id="el-1y7odr66">
+        <!-- YouTube video embed placeholder -->
+        <iframe class="absolute top-0 left-0 w-full h-full rounded-md" src="about:blank" title="राष्ट्रपति मुर्मू ने की INS विक्रांत की सवारी" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" id="el-n8hw4x6l">
+        </iframe>
+    </div>
+    <div class="video-metadata mt-3" id="el-olctjz68">
+        <div class="flex items-center justify-between text-sm text-gray-600" id="el-uyec46p3">
+            
+            <span class="upload-date" id="el-fa6f8gtg"></span>
+        </div>
+    </div>
+</div>
+    <div class="flex items-center text-sm text-gray-600" id="el-7yvgmz2c">
+      <span id="el-7tnulb49">24 views</span>
+      <span class="mx-2" id="el-7h6gwvbe">•</span>
+      <div class="upload-date" id="el-za3hqbb2">
+  <span class="upload-date__value" id="el-2ouqy3bo">2 months ago</span>
+</div>
+    </div>
+  </div>
+</div>
+
+        <!-- Video Card 2 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden animate__animated animate__fadeIn animate__delay-1s" id="el-qeotvj2i">
+  <div class="relative" id="el-4yd5o99y">
+    <img src="https://i.ytimg.com/vi/V36-ssQw69s/hqdefault.jpg" alt="छठ पूजा समाचार" class="w-full h-48 object-cover transition-opacity duration-300 opacity-100" loading="lazy" id="el-sue1iepu">
+    <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center" id="el-cts6jj49">
+      <button class="bg-red-600 hover:bg-red-700 text-white rounded-full w-12 h-12 flex items-center justify-center" id="el-qd2ipuhr">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" id="el-3plvak3s">
+          <path d="M8 5v10l8-5-8-5z" id="el-65lam562"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="p-4" id="el-kvkhpwna">
+    <h3 class="text-lg font-semibold mb-2" id="el-v1h7q65t">छठ पूजा और अधिक समाचार</h3>
+    <div class="flex items-center text-sm text-gray-600" id="el-1reqqo5w">
+      <span id="el-7fr8rlbo">20 views</span>
+      <span class="mx-2" id="el-efw2evgb">•</span>
+      <span id="el-91f539hh">2 months ago</span>
+    </div>
+  </div>
+</div>
+
+        <!-- Video Card 3 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden animate__animated animate__fadeIn animate__delay-2s" id="el-8skqd7sb">
+  <div class="relative" id="el-smuacnrz">
+    <img src="https://i.ytimg.com/vi/G3ZsIzKSbSQ/hqdefault.jpg" alt="महाराष्ट्र चुनाव" class="w-full h-48 object-cover transition-opacity duration-300 opacity-100" loading="lazy" id="el-7lhuq903">
+    <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center" id="el-qcxgj63c">
+      <button class="bg-red-600 hover:bg-red-700 text-white rounded-full w-12 h-12 flex items-center justify-center" id="el-474tmoaa">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" id="el-dznnkbgx">
+          <path d="M8 5v10l8-5-8-5z" id="el-bqc1rvmh"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="p-4" id="el-fjqugx7b">
+    <h3 class="text-lg font-semibold mb-2" id="el-jz9s4c2d">महाराष्ट्र चुनाव, श्रीनगर ऑपरेशन</h3>
+    <div class="flex items-center text-sm text-gray-600" id="el-qqwxe679">
+      <span id="el-gvhb109o">23 views</span>
+      <span class="mx-2" id="el-ns0jxr7u">•</span>
+      <span id="el-lq78f2qk">2 months ago</span>
+    </div>
+  </div>
+</div>
+      </div>
+
+      <div class="text-center mt-12" id="el-p2752j0v">
+        <a href="http://www.youtube.com/@दैनिकसमाचार-DS" class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-semibold inline-flex items-center animate__animated animate__fadeInUp" id="el-lw0r7niz">
+          View More Videos
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlcode>
+              
+              </element><element id="d6b41409-c200-4712-ad5f-bbf536711414" data-section-id="d6b41409-c200-4712-ad5f-bbf536711414">
+
+
+                
+                
+                <htmlcode id="el-k53onhey">
+<div id="root">
+  <section id="popularCategories" class="py-20 bg-neutral-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="el-oaxdl3wi">
+  <h2 class="text-3xl font-bold text-center mb-12 animate__animated animate__fadeInUp">Popular Categories</h2>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <!-- News Category -->
+    <div class="bg-neutral-800 rounded-xl p-6 hover:bg-neutral-700 transition-all duration-300 animate__animated animate__fadeIn">
+      <div class="text-red-500 mb-4">
+        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M18 3a1 1 0 00-1.447-.894L8.763 6H5a3 3 0 000 6h.28l1.771 5.316A1 1 0 008 18h1a1 1 0 001-1v-4.382l6.553 3.276A1 1 0 0018 15V3z"></path>
+        </svg>
+      </div>
+      <h3 class="text-xl font-semibold mb-2">Breaking News</h3>
+      <p class="text-gray-400 mb-4">Latest updates and breaking news coverage</p>
+      <span class="text-sm text-gray-500">120+ videos</span>
+      <iframe class="w-full h-48 mt-4 rounded-lg" src="https://youtube.com/shorts/N2U2EqMnT_I?si=H_-zII6bBM1TjHQY" frameborder="0" allowfullscreen=""></iframe>
+    </div>
+
+    <!-- Politics Category -->
+    <div class="bg-neutral-800 rounded-xl p-6 hover:bg-neutral-700 transition-all duration-300 animate__animated animate__fadeIn animate__delay-1s">
+      <div class="text-blue-500 mb-4">
+        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
+        </svg>
+      </div>
+      <h3 class="text-xl font-semibold mb-2">Politics</h3>
+      <p class="text-gray-400 mb-4">Political news and analysis</p>
+      <span class="text-sm text-gray-500">85+ videos</span>
+    </div>
+
+    <!-- Business Category -->
+    <div class="bg-neutral-800 rounded-xl p-6 hover:bg-neutral-700 transition-all duration-300 animate__animated animate__fadeIn animate__delay-2s">
+      <div class="text-green-500 mb-4">
+        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"></path>
+          <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"></path>
+        </svg>
+      </div>
+      <h3 class="text-xl font-semibold mb-2">Business</h3>
+      <p class="text-gray-400 mb-4">Economy and business updates</p>
+      <span class="text-sm text-gray-500">60+ videos</span>
+    </div>
+
+    <!-- Entertainment Category -->
+    <div class="bg-neutral-800 rounded-xl p-6 hover:bg-neutral-700 transition-all duration-300 animate__animated animate__fadeIn animate__delay-3s">
+      <div class="text-yellow-500 mb-4">
+        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
+        </svg>
+      </div>
+      <h3 class="text-xl font-semibold mb-2">Entertainment</h3>
+      <p class="text-gray-400 mb-4">Latest entertainment coverage</p>
+      <span class="text-sm text-gray-500">45+ videos</span>
+    </div>
+  </div>
+
+  <div class="mt-12 text-center">
+    <p class="text-lg text-gray-400 mb-8 animate__animated animate__fadeIn">Stay updated with our comprehensive news coverage across all categories</p>
+    <button class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-semibold inline-flex items-center group animate__animated animate__fadeInUp" onclick="window.location.href='http://www.youtube.com/@दैनिकसमाचार-DS'">
+      Explore All Categories
+      <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+  </div>
+</div>
+  </section>
+</div>
+</htmlcode>
+              
+              
+              </element><element id="e57e1ab4-3d6a-4e8f-b3e1-535ae1cc3621" data-section-id="e57e1ab4-3d6a-4e8f-b3e1-535ae1cc3621">
+
+<htmlCode>
+<div id="root">
+  <section id="aboutChannel" class="py-20 bg-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <!-- Channel Image -->
+        <div class="lg:w-1/2 animate__animated animate__fadeInLeft">
+          <div class="relative">
+            <img 
+              src="https://yt3.googleusercontent.com/K0M6FLMwgOWcShrPdj1kWTHNA0LusmgjaPnlnEJ1-FiR839UtlKnwwyfTVES6b2JVmu1rcT62A=s160-c-k-c0x00ffffff-no-rj" 
+              alt="दैनिक समाचार Channel" 
+              class="w-64 h-64 rounded-full mx-auto shadow-2xl border-8 border-white"
+            />
+            <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-red-600 rounded-full opacity-20 blur-xl"></div>
+            <div class="absolute -top-4 -left-4 w-32 h-32 bg-blue-600 rounded-full opacity-20 blur-xl"></div>
+          </div>
+        </div>
+
+        <!-- Channel Info -->
+        <div class="lg:w-1/2 animate__animated animate__fadeInRight">
+          <h2 class="text-3xl font-bold text-neutral-900 mb-6">About Our Channel</h2>
+          
+          <div class="space-y-6 text-neutral-700">
+            <p class="text-lg">दैनिक समाचार में आपका स्वागत है—राजनीति, अर्थव्यवस्था, मनोरंजन, खेल और अधिक की विश्वसनीय, तथ्यात्मक और निष्पक्ष रिपोर्टिंग का आपका भरोसेमंद स्रोत।</p>
+            
+            <p class="text-lg">Welcome to दैनिक समाचार—your trusted source for breaking news, current affairs, and in-depth analysis in Hindi. Stay updated on politics, economy, entertainment, sports, and more with unbiased, factual reporting.</p>
+
+            <div class="grid grid-cols-2 gap-4 mt-8">
+              <div class="bg-white p-4 rounded-lg shadow-md">
+                <div class="text-2xl font-bold text-red-600">107+</div>
+                <div class="text-neutral-600">Subscribers</div>
+              </div>
+              <div class="bg-white p-4 rounded-lg shadow-md">
+                <div class="text-2xl font-bold text-red-600">222+</div>
+                <div class="text-neutral-600">Videos</div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-3 mt-6">
+              <span class="px-4 py-2 bg-neutral-200 rounded-full text-neutral-700 text-sm">#trending</span>
+              <span class="px-4 py-2 bg-neutral-200 rounded-full text-neutral-700 text-sm">#news</span>
+              <span class="px-4 py-2 bg-neutral-200 rounded-full text-neutral-700 text-sm">#breakingnews</span>
+              <span class="px-4 py-2 bg-neutral-200 rounded-full text-neutral-700 text-sm">#hindinews</span>
+            </div>
+
+            <div class="pt-6">
+              <a href="#subscribeSection" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 transition-colors duration-300">
+                Subscribe Now
+                <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="eda9f510-02bb-4949-a50b-d7136a5cb68b" data-section-id="eda9f510-02bb-4949-a50b-d7136a5cb68b">
+
+
+                <htmlcode id="el-w6nn3k01">
+<div id="root">
+  <section id="liveStream" class="py-20 bg-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="el-gjxaxej8">
+      <div class="text-center mb-12" id="el-h67kftfo">
+        <h2 class="text-3xl font-bold text-white mb-4 animate__animated animate__fadeInUp" id="el-01kjpi55">Live News Stream</h2>
+        <p class="text-gray-400 animate__animated animate__fadeInUp animate__delay-1s" id="el-35owgyay">Watch our latest live news coverage 24/7</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8" id="el-bk34givl">
+        <!-- Live Stream Preview -->
+        <div class="lg:col-span-2 animate__animated animate__fadeIn" id="el-5rhiknt7">
+          <div class="bg-neutral-800 rounded-lg overflow-hidden" id="el-8olt783d">
+            <div class="relative aspect-video" id="el-wicl4f02">
+              <img src="https://i.ytimg.com/vi/jhSfkd9Qcy8/hqdefault.jpg" alt="Live Stream Preview" class="w-full h-full object-cover transition-opacity duration-300 opacity-100" loading="lazy" id="el-3q76ih5i">
+              <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center" id="el-kraw8mip">
+                <div class="text-center" id="el-1qlhsy0m">
+                  <div class="inline-flex items-center px-4 py-2 rounded-full bg-red-600 text-white mb-4" id="el-1mcw7wp2">
+                    <span class="animate-pulse w-3 h-3 bg-white rounded-full mr-2" id="el-gwfigl2q"></span>
+                    LIVE
+                  </div>
+                  <button class="block w-16 h-16 mx-auto bg-white rounded-full shadow-lg hover:bg-gray-100 transition-colors duration-300" id="el-x0lujg7f">
+                    <svg class="w-8 h-8 text-red-600 mx-auto" fill="currentColor" viewBox="0 0 20 20" id="el-zpw8wyen">
+                      <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" id="el-o804dk2p"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="p-6" id="el-rn6w7trz">
+              <h3 class="text-xl font-semibold text-white mb-2" id="el-779vgkcf">24x7 Live News Coverage</h3>
+              <p class="text-gray-400" id="el-yrrcbzpt">Stay updated with real-time news coverage and breaking updates from across the nation</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Upcoming Streams -->
+        <div class="lg:col-span-1 animate__animated animate__fadeIn animate__delay-1s" id="el-h4w7a3ep">
+          <div class="bg-neutral-800 rounded-lg p-6" id="el-on20nt26">
+            <h3 class="text-xl font-semibold text-white mb-6" id="el-gmu6gpzl">Upcoming Live Streams</h3>
+            
+            <div class="space-y-6" id="el-q7hoel2q">
+              <div class="flex items-start space-x-4" id="el-qy6gtv30">
+                <div class="min-w-[60px] text-center" id="el-938ldz9z">
+                  <div class="text-red-500 font-semibold" id="el-awzdrurp">TODAY</div>
+                  <div class="text-gray-400" id="el-hwyoumwq">9:00 PM</div>
+                </div>
+                <div id="el-62hd6k3m">
+                  <h4 class="text-white font-medium" id="el-zkixb95e">Evening News Bulletin</h4>
+                  <p class="text-gray-400 text-sm" id="el-wtq07f5z">Daily news roundup and analysis</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4" id="el-r4r3431h">
+                <div class="min-w-[60px] text-center" id="el-varsmllc">
+                  <div class="text-red-500 font-semibold" id="el-bzd2lek9">TMR</div>
+                  <div class="text-gray-400" id="el-lnxl2asv">10:00 AM</div>
+                </div>
+                <div id="el-1psbo1km">
+                  <h4 class="text-white font-medium" id="el-eyn85ejl">Morning News Show</h4>
+                  <p class="text-gray-400 text-sm" id="el-z8udmlhl">Start your day with latest updates</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4" id="el-mv7wd1u4">
+                <div class="min-w-[60px] text-center" id="el-co8iamo9">
+                  <div class="text-red-500 font-semibold" id="el-epwv3ncu">TMR</div>
+                  <div class="text-gray-400" id="el-uwsm9ri8">6:00 PM</div>
+                </div>
+                <div id="el-46pjbkxz">
+                  <h4 class="text-white font-medium" id="el-cdhmaqyf">Special Report</h4>
+                  <p class="text-gray-400 text-sm" id="el-ecq5cj48">In-depth analysis of trending topics</p>
+                </div>
+              </div>
+            </div>
+
+            <div id="el-f7j4ey18">
+  <a href="http://www.youtube.com/@दैनिकसमाचार-DS" class="block">
+    <button class="w-full mt-8 bg-red-600 hover:bg-red-700 text-white rounded-lg py-3 font-medium transition-colors duration-300" id="el-f7j4ey18">
+      View Schedule
+    </button>
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlcode>
+              </element><element id="47f65e85-6a5e-42da-9b4d-65bb3cae2081" data-section-id="47f65e85-6a5e-42da-9b4d-65bb3cae2081">
+
+
+                <htmlcode id="el-ihbaqsge">
+<div id="root">
+  <section id="subscribeSection" class="py-20 bg-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="el-48ioui2k">
+      <div class="bg-neutral-900 rounded-3xl overflow-hidden shadow-2xl" id="el-y34571uz">
+        <div class="grid grid-cols-1 lg:grid-cols-2" id="el-xnktlmu9">
+          <!-- Left Content -->
+          <div class="p-8 lg:p-12" id="el-w17i2rcr">
+            <div class="animate__animated animate__fadeInLeft" id="el-68xkm6g6">
+              <h2 class="text-3xl font-bold text-white mb-6" id="el-jndqgaxi">Subscribe to Our Channel</h2>
+              <p class="text-gray-400 mb-8" id="el-c2vqv9e5">Join 107+ subscribers who get daily news updates from दैनिक समाचार</p>
+              
+              <div class="space-y-6" id="el-xxua1bcb">
+                <div class="flex items-center space-x-3" id="el-35txj391">
+                  <div class="flex-shrink-0 w-12 h-12 bg-red-600 rounded-full flex items-center justify-center" id="el-0mz5ka11">
+                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20" id="el-s66y8ucm">
+                      <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" id="el-92lnb8gy"></path>
+                    </svg>
+                  </div>
+                  <div class="text-white" id="el-4pzzfbc4">
+                    <h3 class="font-semibold" id="el-6z8fp6g8">Daily Updates</h3>
+                    <p class="text-gray-400 text-sm" id="el-vjg0p79z">Get breaking news alerts</p>
+                  </div>
+                </div>
+
+                <div class="flex items-center space-x-3" id="el-mamzi1yk">
+                  <div class="flex-shrink-0 w-12 h-12 bg-red-600 rounded-full flex items-center justify-center" id="el-3r1397va">
+                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20" id="el-2l5wapni">
+                      <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zm12.553 1.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" id="el-8lbne0bv"></path>
+                    </svg>
+                  </div>
+                  <div class="text-white" id="el-gb3z2geo">
+                    <h3 class="font-semibold" id="el-kb2penpb">Exclusive Content</h3>
+                    <p class="text-gray-400 text-sm" id="el-at8natha">Access to special reports</p>
+                  </div>
+                </div>
+
+                <div class="flex items-center space-x-3" id="el-15lvl2lg">
+                  <div class="flex-shrink-0 w-12 h-12 bg-red-600 rounded-full flex items-center justify-center" id="el-e2jygxuj">
+                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20" id="el-jlc0f2rs">
+                      <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" id="el-38bsytof"></path>
+                    </svg>
+                  </div>
+                  <div class="text-white" id="el-y1bcyrmb">
+                    <h3 class="font-semibold" id="el-6khc8a20">News Archives</h3>
+                    <p class="text-gray-400 text-sm" id="el-68zzvkfp">Access previous coverage</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Content -->
+          <div class="bg-neutral-800 p-8 lg:p-12" id="el-71pnhw5x">
+            <div class="animate__animated animate__fadeInRight" id="el-pm5j2i6k">
+              <div class="flex items-center justify-center mb-8" id="el-iqk8fdsp">
+                <img src="https://yt3.googleusercontent.com/K0M6FLMwgOWcShrPdj1kWTHNA0LusmgjaPnlnEJ1-FiR839UtlKnwwyfTVES6b2JVmu1rcT62A=s160-c-k-c0x00ffffff-no-rj" alt="Channel Logo" class="w-24 h-24 rounded-full border-4 border-red-600 transition-opacity duration-300 opacity-100" loading="lazy" id="el-rpkkkjo7">
+              </div>
+
+              <div class="text-center mb-8" id="el-3nc4nd5b">
+                <div class="inline-flex items-center bg-neutral-700 rounded-full px-4 py-2 text-sm text-white" id="el-f819ezqe">
+                  <span class="animate-pulse w-2 h-2 bg-red-600 rounded-full mr-2" id="el-yj56u7r7"></span>
+                  222+ Videos
+                </div>
+              </div>
+
+              <a href="http://www.youtube.com/@दैनिकसमाचार-DS?sub_confirmation=1" target="_blank" rel="noopener noreferrer" id="el-jlq8sr4q">
+  <button class="w-full bg-red-600 hover:bg-red-700 text-white rounded-lg py-4 font-semibold flex items-center justify-center space-x-2 transition-colors duration-300">
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm4 9h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 112 0v3h3a1 1 0 110 2z"></path>
+    </svg>
+    <span>Subscribe Now</span>
+  </button>
+</a>
+
+              <p class="text-center text-gray-400 text-sm mt-6" id="el-5ixfsvs4">
+                Join our community for daily news updates
+              </p>
+
+              <div class="mt-8 flex justify-center space-x-4" id="el-zudwhcsp">
+                <div class="text-center" id="el-iplm3cqz">
+                  <div class="text-2xl font-bold text-white" id="el-xc47yoig">107+</div>
+                  <div class="text-gray-400 text-sm" id="el-v596wunf">Subscribers</div>
+                </div>
+                <div class="text-center" id="el-2mmp5g25">
+                  <div class="text-2xl font-bold text-white" id="el-cmn5hcma">24/7</div>
+                  <div class="text-gray-400 text-sm" id="el-9dgo34qb">News Coverage</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlcode>
+              </element><element id="a18d02ad-b5d7-43cd-9d4d-72ce7b8ef85f" data-section-id="a18d02ad-b5d7-43cd-9d4d-72ce7b8ef85f">
+
+<htmlCode>
+<div id="root">
+  <section id="contactUs" class="py-20 bg-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Contact Information -->
+        <div class="animate__animated animate__fadeInLeft">
+          <h2 class="text-3xl font-bold text-white mb-8">Get in Touch</h2>
+          
+          <div class="space-y-6 text-gray-300">
+            <p class="text-lg">Have a news tip or want to collaborate? Reach out to us:</p>
+            
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-white font-semibold">Email</p>
+                <p class="text-gray-400">chandan264@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-white font-semibold">Working Hours</p>
+                <p class="text-gray-400">24/7 News Coverage</p>
+              </div>
+            </div>
+
+            <div class="pt-8">
+              <h3 class="text-xl font-semibold text-white mb-4">Follow Us</h3>
+              <div class="flex space-x-4">
+                <a href="#" class="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors duration-300">
+                  <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                  </svg>
+                </a>
+                <a href="#" class="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors duration-300">
+                  <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="bg-neutral-800 rounded-xl p-8 animate__animated animate__fadeInRight">
+          <form class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-300">Name</label>
+              <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-red-500 focus:ring-red-500 text-white">
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-300">Email</label>
+              <input type="email" id="email" name="email" class="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-red-500 focus:ring-red-500 text-white">
+            </div>
+
+            <div>
+              <label for="subject" class="block text-sm font-medium text-gray-300">Subject</label>
+              <select id="subject" name="subject" class="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-red-500 focus:ring-red-500 text-white">
+                <option>News Tip</option>
+                <option>Collaboration</option>
+                <option>Feedback</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-300">Message</label>
+              <textarea id="message" name="message" rows="4" class="mt-1 block w-full rounded-md bg-neutral-700 border-transparent focus:border-red-500 focus:ring-red-500 text-white"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-lg transition-colors duration-300">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="a7aa9e65-15e9-4d03-8bdb-58d451b4cd1f" data-section-id="a7aa9e65-15e9-4d03-8bdb-58d451b4cd1f">
+
+<htmlCode>
+<div id="root">
+  <footer id="footer" class="bg-neutral-900 pt-12 pb-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-neutral-800">
+        <!-- Channel Info -->
+        <div class="col-span-1 md:col-span-2">
+          <div class="flex items-center mb-4">
+            <img 
+              src="https://yt3.googleusercontent.com/K0M6FLMwgOWcShrPdj1kWTHNA0LusmgjaPnlnEJ1-FiR839UtlKnwwyfTVES6b2JVmu1rcT62A=s160-c-k-c0x00ffffff-no-rj" 
+              alt="दैनिक समाचार Logo" 
+              class="h-10 w-10 rounded-full"
+            />
+            <span class="ml-3 text-xl font-bold text-white">दैनिक समाचार</span>
+          </div>
+          <p class="text-gray-400 mb-4">Your trusted source for breaking news, current affairs, and in-depth analysis in Hindi.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white">
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white">
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="#hero" class="text-gray-400 hover:text-white">Home</a></li>
+            <li><a href="#latestVideos" class="text-gray-400 hover:text-white">Latest Videos</a></li>
+            <li><a href="#popularCategories" class="text-gray-400 hover:text-white">Categories</a></li>
+            <li><a href="#aboutChannel" class="text-gray-400 hover:text-white">About Us</a></li>
+            <li><a href="#liveStream" class="text-gray-400 hover:text-white">Live Stream</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h3 class="text-white font-semibold mb-4">Contact Us</h3>
+          <ul class="space-y-2">
+            <li class="text-gray-400">
+              <a href="mailto:chandan264@gmail.com" class="hover:text-white">
+                chandan264@gmail.com
+              </a>
+            </li>
+            <li class="text-gray-400">24/7 News Coverage</li>
+            <li class="text-gray-400">222+ Videos</li>
+            <li class="text-gray-400">107+ Subscribers</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div class="pt-8">
+        <div class="text-center">
+          <p class="text-gray-400 text-sm">
+            © 2024 दैनिक समाचार. All rights reserved.
+          </p>
+          <div class="mt-4 flex justify-center space-x-6">
+            <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+            <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+            <a href="#" class="text-gray-400 hover:text-white text-sm">Copyright Notice</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll to Top Button -->
+      <div class="fixed bottom-8 right-8">
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="bg-red-600 hover:bg-red-700 text-white rounded-full p-3 shadow-lg transition-colors duration-300">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+</div>
+</htmlCode></element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
+          
