@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentive Hub Chat</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1>Agentive Hub Chat</h1>
+    <button onclick="startChat()">Start Chat</button>
+    <p id="response"></p>
+
+    <script>
+        async function startChat() {
+            try {
+                let session_id;
+                const apiKey = "e06a7619-6d0a-4b76-b89a-072883c52399";
+                const assistantId = "69a36854-f322-49de-ba11-4aafd9b65761";
+
+                // Create chat session
+                const chatSession = await axios.post('https://agentivehub.com/api/chat/session', {
+                    api_key: apiKey,
+                    assistant_id: assistantId
+                });
+
+                session_id = chatSession.data.session_id;
+
+                // Send message to chat
+                const chatResponse = {
+                    api_key: apiKey,
+                    session_id: session_id,
+                    type: 'custom_code',
+                    assistant_id: assistantId,
+                    messages: [{ role: 'user', content: 'Say Hello!' }]
+                };
+
+                const chat = await axios.post('https://agentivehub.com/api/chat', chatResponse);
+
+                // Display response
+                document.getElementById('response').innerText = chat.data.messages[0].content;
+            } catch (error) {
+                console.error("Error:", error);
+                document.getElementById('response').innerText = "Error in chat request.";
+            }
+        }
+    </script>
+</body>
+</html>
