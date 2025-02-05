@@ -5,6 +5,7 @@
          header {
             position: fixed;
             top: 0;
+            left: 0;
             width: 100%;
             z-index: 9999 ! important;
             display: block ! important;
@@ -394,11 +395,22 @@
 // If the header disappears, bring it back when clicking outside the AI chat
 document.addEventListener("click", function(event) {
     var header = document.querySelector("header");
-    var chatWidget = document.querySelector("#yourChatWidgetID"); // Replace this if needed
+    var chatWidget = document.querySelector("817c7736-6e45-45cb-8b8f-427a20a6cbcf"); // Replace this if needed
 
     if (header && chatWidget) {
         if (!chatWidget.contains(event.target)) {
             header.style.display = "block";
+        }
+    }
+});
+   // Ensure header returns when AI chat closes
+document.addEventListener("click", function(event) {
+    var header = document.querySelector("header");
+    var chatWidget = document.querySelector("817c7736-6e45-45cb-8b8f-427a20a6cbcf"); // Replace with actual chat widget ID
+
+    if (header && chatWidget) {
+        if (!chatWidget.contains(event.target)) {
+            header.style.display = "block"; // Forces the header to stay visible
         }
     }
 });
