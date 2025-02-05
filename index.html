@@ -384,37 +384,7 @@
       </main>
 
       <!-- {bodyScripts} -->
-<script>
-   document.addEventListener("DOMContentLoaded", function() {
-    var header = document.querySelector("header");
-    if (header) {
-        header.style.display = "block";
-    }
-});
 
-// If the header disappears, bring it back when clicking outside the AI chat
-document.addEventListener("click", function(event) {
-    var header = document.querySelector("header");
-    var chatWidget = document.querySelector("817c7736-6e45-45cb-8b8f-427a20a6cbcf"); // Replace this if needed
-
-    if (header && chatWidget) {
-        if (!chatWidget.contains(event.target)) {
-            header.style.display = "block";
-        }
-    }
-});
-   // Ensure header returns when AI chat closes
-document.addEventListener("click", function(event) {
-    var header = document.querySelector("header");
-    var chatWidget = document.querySelector("817c7736-6e45-45cb-8b8f-427a20a6cbcf"); // Replace with actual chat widget ID
-
-    if (header && chatWidget) {
-        if (!chatWidget.contains(event.target)) {
-            header.style.display = "block"; // Forces the header to stay visible
-        }
-    }
-});
-</script>
    </body>
 </html><element id="8038a016-b526-4b49-8d26-369f896cdcf8" data-section-id="8038a016-b526-4b49-8d26-369f896cdcf8">
 
@@ -1210,6 +1180,37 @@ document.addEventListener("click", function(event) {
     v.type = "text/javascript";
     s.parentNode.insertBefore(v, s);
   })(document, 'script');
+</script>
+<script>
+   document.addEventListener("DOMContentLoaded", function() {
+    var header = document.querySelector("header");
+    if (header) {
+        header.style.display = "block";
+    }
+});
+
+// If the header disappears, bring it back when clicking outside the AI chat
+document.addEventListener("click", function(event) {
+    var header = document.querySelector("header");
+    var chatWidget = document.querySelector("817c7736-6e45-45cb-8b8f-427a20a6cbcf"); // Replace this if needed
+
+    if (header && chatWidget) {
+        if (!chatWidget.contains(event.target)) {
+            header.style.display = "block";
+        }
+    }
+});
+   // Ensure header returns when AI chat closes
+document.addEventListener("click", function(event) {
+    var header = document.querySelector("header");
+    var chatWidget = document.querySelector("817c7736-6e45-45cb-8b8f-427a20a6cbcf"); // Replace with actual chat widget ID
+
+    if (header && chatWidget) {
+        if (!chatWidget.contains(event.target)) {
+            header.style.display = "block"; // Forces the header to stay visible
+        }
+    }
+});
 </script>
             </body>
             </html>
