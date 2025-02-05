@@ -874,10 +874,39 @@
   </section>
 </div>
 </htmlcode>
-   <section>
-      Thanks for visiting
-   </section>
-              </element><element id="47f65e85-6a5e-42da-9b4d-65bb3cae2081" data-section-id="47f65e85-6a5e-42da-9b4d-65bb3cae2081">
+              </element>
+<!-- New section for the AI agent -->
+  <section id="ai-agent-section">
+    <div class="ai-agent-container">
+      <!-- Place your AI agent integration code or widget here -->
+      <h2>My AI Agent</h2>
+      <p>This is where the AI agent interface will appear.</p>
+      <!-- Example: embedding an iframe or running some JavaScript -->
+      <!-- <iframe src="path-to-your-ai-agent"></iframe> -->
+    </div>
+  </section>
+  <!-- Optional JavaScript if needed -->
+<script type="text/javascript">
+  (function(d, t) {
+    var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+    v.onload = function() {
+      if (!document.getElementById('root')) {
+        var root = d.createElement('div');
+        root.id = 'root';
+        d.body.appendChild(root);
+      }
+      if (window.myChatWidget && typeof window.myChatWidget.load === 'function') {
+        window.myChatWidget.load({
+          id: '817c7736-6e45-45cb-8b8f-427a20a6cbcf',
+        });
+      }
+    };
+    v.src = "https://agentivehub.com/production.bundle.min.js";
+    v.type = "text/javascript";
+    s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+<element id="47f65e85-6a5e-42da-9b4d-65bb3cae2081" data-section-id="47f65e85-6a5e-42da-9b4d-65bb3cae2081">
 
 
                 <htmlcode id="el-ihbaqsge">
