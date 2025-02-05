@@ -355,6 +355,13 @@
           console.log('Connection lost');
         });
       </script>
+      <style>
+         .header {
+            position: relative;
+            z-index: 9999;
+            display: block ! important;
+         }
+      </style>
    </head>
    <body class="antialiased text-gray-800 min-h-screen flex flex-col">
       <!-- Skip to main content link for accessibility -->
@@ -1154,6 +1161,10 @@
       if (!document.getElementById('root')) {
         var root = d.createElement('div');
         root.id = 'root';
+         root.style.position = 'fixed';
+         root.style.bottom = '0';
+         root.style.right = '0';
+         root.style.zIndex = '9998'; // Lower than header
         d.body.appendChild(root);
       }
       if (window.myChatWidget && typeof window.myChatWidget.load === 'function') {
