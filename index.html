@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
    <head>
+      <style>
+         header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 9999; /* Ensures it's above other elements */
+            display: block ! important; /* Prevents hiding */
+         }
+      </style>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="description" content="{{project.meta.ogDescription}}">
@@ -355,13 +364,6 @@
           console.log('Connection lost');
         });
       </script>
-      <style>
-         .header {
-            position: relative;
-            z-index: 9999;
-            display: block ! important;
-         }
-      </style>
    </head>
    <body class="antialiased text-gray-800 min-h-screen flex flex-col">
       <!-- Skip to main content link for accessibility -->
